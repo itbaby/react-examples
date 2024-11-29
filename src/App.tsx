@@ -7,10 +7,22 @@ import RefExample from './RefExample';
 import SuspenseExample from './SuspenseExample';
 import ArticleExample from './ArticleExample';
 import UseContextExample from './UseContextExample';
+import UseMemoExample from './UseMemoExample';
+import UseClickAway from './UseClickAway';
+import UseCopytoClipboardExample from './UseCopyToClipboardExample';
+import UseDebounceExample from './UseDebounceExample';
 
 function App() {
   return (
     <React.StrictMode>
+      <UseDebounceExample />
+      <hr />
+      <UseCopytoClipboardExample />
+      <hr />
+      <UseClickAway />
+      <hr />
+      <UseMemoExample />
+      <hr />
       <UseContextExample />
       <hr />
       <ArticleExample />
