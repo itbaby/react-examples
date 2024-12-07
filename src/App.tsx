@@ -15,6 +15,7 @@ import UseDebounceExample from './UseDebounceExample';
 function App() {
   return (
     <React.StrictMode>
+      <hr />
       <UseDebounceExample />
       <hr />
       <UseCopytoClipboardExample />
