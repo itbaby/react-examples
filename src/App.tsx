@@ -11,13 +11,18 @@ import UseMemoExample from './UseMemoExample';
 import UseClickAway from './UseClickAway';
 import UseCopytoClipboardExample from './UseCopyToClipboardExample';
 import UseDebounceExample from './UseDebounceExample';
-import ServerComponentExample from './ServerComponentExample';
-
+// import ServerComponentExample from './ServerComponentExample';
+import UseReducerExample from './UseReducerExample';
+import UseEffectExample from './UseEffectExample';
+import UseRefExample from './UseRefExample';
 function App() {
   return (
     <React.StrictMode>
-      <hr />
-      <ServerComponentExample page="index" />
+      <UseRefExample/>
+      <hr/>
+      <UseEffectExample/>
+      <hr/>
+      <UseReducerExample/>
       <hr />
       <UseDebounceExample />
       <hr />

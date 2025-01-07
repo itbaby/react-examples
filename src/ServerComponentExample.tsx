@@ -1,7 +1,7 @@
 import { marked } from "marked";
-import fs from "node:fs/promises";
+// import fs from "node:fs/promises";
 // import { useEffect, useState } from "react";
-import sanitizeHtml from "sanitize-html";
+// import sanitizeHtml from "sanitize-html";
 
 /*
 function Page({ page }: { page: string }) {
@@ -17,6 +17,7 @@ function Page({ page }: { page: string }) {
 
 export default async function Page({ page }: { page: string }) {
   // const response = await fetch(`/api/content/${page}`);
-  const content = await fs.readFile(`${page}.md`, 'utf-8');
-  return <div>{sanitizeHtml(marked(content) as string)}</div>
+  // const content = await fs.readFile(`${page}.md`, 'utf-8');
+  // return <div>{sanitizeHtml(marked(content) as string)}</div>
+  return <div></div>
 }
