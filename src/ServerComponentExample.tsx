@@ -1,15 +1,22 @@
 import { marked } from "marked";
+import fs from "node:fs/promises";
+// import { useEffect, useState } from "react";
 import sanitizeHtml from "sanitize-html";
 
-function ServerComponentExample() {
-  const html = sanitizeHtml(marked("Hello *Markdown*"));
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
-}
+/*
+function Page({ page }: { page: string }) {
+  const [content, setContent] = useState('');
+  useEffect(() => {
+    fetch('/api/content/${page}')
+      .then(response => response.text())
+      .then(text => setContent(text));
+  }, [page]);
+  return <div>{sanitizeHtml(marked(content) as string)}</div>;
+}*/
 
 
-function Node() {
-  return <div><ServerComponentExample /></div>;
+export default async function Page({ page }: { page: string }) {
+  // const response = await fetch(`/api/content/${page}`);
+  const content = await fs.readFile(`${page}.md`, 'utf-8');
+  return <div>{sanitizeHtml(marked(content) as string)}</div>
 }
-//组件支持实时更新
-//不能使用useEffect,useState, 用于展示服务端渲染
-//props 必须

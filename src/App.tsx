@@ -11,10 +11,13 @@ import UseMemoExample from './UseMemoExample';
 import UseClickAway from './UseClickAway';
 import UseCopytoClipboardExample from './UseCopyToClipboardExample';
 import UseDebounceExample from './UseDebounceExample';
+import ServerComponentExample from './ServerComponentExample';
 
 function App() {
   return (
     <React.StrictMode>
+      <hr />
+      <ServerComponentExample page="index" />
       <hr />
       <UseDebounceExample />
       <hr />
