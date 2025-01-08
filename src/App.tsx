@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
 import ErrorBoundaryExample from './ErrorBoundaryExample';
 import './milligram.min.css';
 import PortalsExample from './PortalsExample';
@@ -15,14 +17,28 @@ import UseDebounceExample from './UseDebounceExample';
 import UseReducerExample from './UseReducerExample';
 import UseEffectExample from './UseEffectExample';
 import UseRefExample from './UseRefExample';
+import SecondPage from './SecondPage';
+import UserParamExample from './UserParamExample'
 function App() {
   return (
     <React.StrictMode>
-      <UseRefExample/>
-      <hr/>
-      <UseEffectExample/>
-      <hr/>
-      <UseReducerExample/>
+      <Router>
+        <Link to="/">Home</Link>
+        <Link to="/user/1234"> User 1234 </Link>
+        <Link to="/secondary">Secondary</Link>
+        <Routes>
+          <Route path='/user/:id' element={<UserParamExample/>}/>
+          <Route path='/secondary' element={<SecondPage />} />
+        </Routes>
+      </Router>
+      <nav>
+      </nav>
+      <hr />
+      <UseRefExample />
+      <hr />
+      <UseEffectExample />
+      <hr />
+      <UseReducerExample />
       <hr />
       <UseDebounceExample />
       <hr />
