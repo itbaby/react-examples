@@ -19,6 +19,7 @@ import UseEffectExample from './UseEffectExample';
 import UseRefExample from './UseRefExample';
 import SecondPage from './SecondPage';
 import UserParamExample from './UserParamExample'
+import UseCallBackExample from './UseCallBackExample';
 function App() {
   return (
     <React.StrictMode>
@@ -33,6 +34,7 @@ function App() {
       </Router>
       <nav>
       </nav>
+      <UseCallBackExample/>
       <hr />
       <UseRefExample />
       <hr />
